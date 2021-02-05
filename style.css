@@ -1,0 +1,259 @@
+/* BODY */
+
+body
+{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.conteneur
+{
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+}
+
+/* HEADER */
+
+.headerIndex
+{
+    padding: 15px;
+    box-shadow: 0 0 10px black;
+    position: relative;
+    z-index: 1000;
+}
+
+.headerLogo
+{
+    margin-top: 10px;
+    margin-bottom: 10px;;
+    display: flex;
+    flex-direction: row;
+}
+
+/* SECTIONS */
+
+.localisation
+{
+    display: flex;
+    justify-content: center;
+    padding: 20px 15px;
+    background-color: rgb(243, 243, 243);
+    font-size: 20px;
+    position: relative;
+}
+
+.localisationText
+{
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.presentation
+{
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(250, 250, 250);
+}
+
+.presentationTitre
+{
+    margin: 0;
+    font-size: 30px;
+}
+
+.presentationSoustitre
+{
+    font-weight: 300;
+    margin: 25px 0;
+    font-size: 20px;
+}
+
+.presentationBoutton
+{
+    border: 0;
+    padding: 15px 25px;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 100px;
+    color: white;
+    background-color: #9356DC;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
+}
+
+.explication
+{
+    padding: 30px 15px;
+}
+
+.explicationTitre
+{
+    margin-top: 0;
+}
+
+.explicationListe
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.explicationIcone
+{
+    margin-right: 20px;
+}
+
+.explicationPoint
+{
+    padding: 25px;
+    margin: 15px 0 15px 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    display: flex;
+    position: relative;
+}
+
+.restaurants
+{
+    background-color: #F6F6F6;  
+    padding: 30px 15px;
+}
+
+.cartes
+{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.carte
+{
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+}
+
+.carteImage
+{
+    height: 190px;
+    width: 100%;
+    border: transparent solid 0px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: none;
+    object-fit: cover;
+}
+
+.carteVignette
+{
+    background-color: #99E2D0;
+    color: darken(#99E2D0, 50%);
+    padding: 10px;
+    border-radius: 2px;
+    position: absolute;
+    top: 15px;
+    right: 12px;
+}
+
+.carteFooter
+{
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carteTitre
+{
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.carteSoustitre
+{
+    margin: 0;
+}
+
+.menuBoutton
+{
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.groupeCarte
+{
+    flex: 1;
+    color: black;
+}
+
+.carteLike
+{
+    color: black;
+}
+
+/* FOOTER */
+
+.footer
+{
+    background-color: #353535;
+}
+
+.footerLogo
+{
+    margin: 0;
+    margin-bottom: 15px;
+    max-width: 200px;
+    justify-content: center;
+}
+
+.footerListe
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerPoint
+{
+    margin: 8px 0;
+}
+
+.footerLien
+{
+    color: white;
+    text-decoration: none;
+}
+
+.footerIcone
+{
+    margin-right: 10px;
+    width: 20px;
+}
+
+.footerLien:hover
+{
+    text-decoration: underline;
+}
+
+.footerConteneur
+{
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
