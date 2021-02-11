@@ -18,7 +18,7 @@ body
 .headerIndex
 {
     padding: 15px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px grey;
     position: relative;
     z-index: 1000;
 }
@@ -29,6 +29,8 @@ body
     margin-bottom: 10px;;
     display: flex;
     flex-direction: row;
+    width: 60%;
+    margin: auto;
 }
 
 /* SECTIONS */
@@ -39,21 +41,27 @@ body
     justify-content: center;
     padding: 20px 15px;
     background-color: rgb(243, 243, 243);
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
+}
+
+.localisationIcone
+{
+    margin-right: 1rem;
+    color: #303030;
 }
 
 .localisationText
 {
-    font-weight: 300;
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 0;
     margin-bottom: 0;
+    color: #303030;
 }
 
 .presentation
 {
-    padding: 30px;
+    padding: 30px 30px 60px 30px;
     text-align: center;
     background-color: rgb(250, 250, 250);
 }
@@ -62,26 +70,28 @@ body
 {
     margin: 0;
     font-size: 30px;
+    font-size: 20px;
 }
 
 .presentationSoustitre
 {
     font-weight: 300;
-    margin: 25px 0;
-    font-size: 20px;
+    margin: 20px 0 40px 0;
+    font-size: 15px;
 }
 
 .presentationBoutton
 {
-    border: 0;
+    border: 0px;
+    width: auto;
     padding: 15px 25px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 100px;
     color: white;
-    background-color: #9356DC;
+    background: linear-gradient(#FF79DA, #9356DC);
     cursor: pointer;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .explication
@@ -89,9 +99,15 @@ body
     padding: 30px 15px;
 }
 
+.explicationIcone
+{
+    color: #303030;
+}
+
 .explicationTitre
 {
     margin-top: 0;
+    font-size: 20px;
 }
 
 .explicationListe
@@ -99,6 +115,8 @@ body
     margin: 0;
     padding: 0;
     list-style: none;
+    font-size: 15px;
+    counter-reset: compteListe;
 }
 
 .explicationIcone
@@ -115,12 +133,60 @@ body
     background-color: #F6F6F6;
     display: flex;
     position: relative;
+    counter-increment: compteListe;
+}
+
+.explicationPoint:hover
+{
+    background-color: rgb(147, 86, 220,0.25);
+}
+
+.explicationPoint:first-child
+{
+    margin-top: 0;
+}
+
+.explicationPoint:last-child
+{
+    margin-bottom: 0; 
+}
+
+.explicationPoint::before
+{
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    background: #9356DC;
+    height: 24px;
+    width: 24px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    left: -12px;
+}
+
+.explicationIcone:hover
+{
+   color: rgb(147, 86, 220)
+}
+
+.main
+{
+    background-color: #F6F6F6;
 }
 
 .restaurants
 {
     background-color: #F6F6F6;  
     padding: 30px 15px;
+    padding-bottom: 60px;
+}
+
+.restaurantsTitre
+{
+    font-size: 20px;
 }
 
 .cartes
@@ -154,11 +220,13 @@ body
 .carteVignette
 {
     background-color: #99E2D0;
+    color: green;
+    font-weight: bold;
     padding: 10px;
     border-radius: 2px;
     position: absolute;
     top: 15px;
-    right: 12px;
+    right: 15px;
 }
 
 .carteFooter
@@ -173,11 +241,13 @@ body
 {
     margin: 0;
     margin-bottom: 4px;
+    font-size: 16px;
 }
 
 .carteSoustitre
 {
     margin: 0;
+    font-size: 14px;
 }
 
 .menuBoutton
@@ -187,9 +257,10 @@ body
     background-color: transparent;
     border: transparent 0px solid;
     padding: 0;
-    display:flex;
+    display: flex;
     align-items:center;
     justify-content:center;
+    position: relative;
 }
 
 .groupeCarte
@@ -198,9 +269,42 @@ body
     color: black;
 }
 
-.carteLike
+.carteLikeNoBg
 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     color: black;
+}
+
+.carteLikeBg
+{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: #9356DC;
+}
+
+.carteLikeNoBg:hover
+{
+    opacity: 0;
+}
+
+.carteLikeBg:hover
+{
+    opacity: 1;
+    transition-duration: 0.5s;
 }
 
 /* FOOTER */
@@ -215,7 +319,9 @@ body
     margin: 0;
     margin-bottom: 15px;
     max-width: 200px;
-    justify-content: center;
+    color: white;
+    font-family: 'Shrikhand', cursive;
+    font-weight: normal;
 }
 
 .footerListe
@@ -234,6 +340,7 @@ body
 {
     color: white;
     text-decoration: none;
+    font-size: 15px;
 }
 
 .footerIcone
@@ -255,4 +362,290 @@ body
     padding: 15px;
     display: flex;
     flex-direction: column;
+}
+
+/* RESTAURANTS */
+
+.headerRestaurant
+{
+    position: relative;
+}
+
+.headerLogoBis
+{
+    padding: 10px;
+    margin-bottom: 10px;;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    margin: auto;
+}
+
+.headerFleche
+{
+    position: absolute;
+    left: 32px;
+    height: 32px;
+    width: 32px;
+    top: 60%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #303030;
+}
+
+.presentationImage
+{
+    max-width: 100%;
+    max-height: 240px;
+    width: 100%;
+    object-fit: cover;  
+}
+
+.groupeMenu
+{
+    margin-top: -64px;
+    border-radius: 32px 32px 0px 0px;
+    background-color: #F6F6F6;
+    z-index: 1;
+    position: relative;
+    max-width: 100%;
+}
+
+.menuHeader
+{
+    padding: 16px 32px 0px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menuTitre
+{
+    font-family: "Shrikhand", "cursive";
+}
+
+
+.menuCartes
+{
+    display: grid;
+}
+
+.menuCartes
+{
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0px 16px;
+    margin: auto;
+}
+
+.menuCarte__titre
+{
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 8px;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.menuCarte__titre::after
+{
+    content: " ";
+    width: 48px;
+    height: 4px;
+    background-color: #99E2D0;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.menuRestaurant
+{
+    background-color: white;
+    padding: 12px;
+    display: flex;
+    border-radius: 12px;
+    margin: 16px 0px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 100%;
+    animation-duration: 0.6s;
+    animation-name: Restaurant;
+    animation-timing-function: cubic-bezier(0.5,1.58,0.34,0.82);
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%;
+}
+
+@keyframes Restaurant 
+{
+    0% 
+    {
+        transform: scale(0)
+    }
+    100% 
+    {
+        transform: scale(1);
+    }
+}
+
+.delay-0 
+{
+    animation-delay: 0s;
+}
+  
+.delay-1 
+{
+    animation-delay: 0.1s;
+}
+  
+.delay-2 
+{
+    animation-delay: 0.2s;
+}
+  
+.delay-3 
+{
+    animation-delay: 0.3s;
+}
+  
+.delay-4 
+{
+    animation-delay: 0.4s;
+}
+  
+.delay-5 
+{
+    animation-delay: 0.5s;
+}
+  
+.delay-6 
+{
+    animation-delay: 0.6s;
+}
+  
+.delay-7 
+{
+    animation-delay: 0.7s;
+}
+  
+.delay-8 
+{
+    animation-delay: 0.8s;
+}
+
+.delay-9
+{
+    animation-delay: 0.9s;
+}
+
+.menuRestaurant__header
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+}
+
+.menuRestaurant__titre
+{
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.menuRestaurant__description
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.menuRestaurant__prix
+{
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 8px;
+    font-size: 13px;
+}
+
+.menuRestaurant__confirmation
+{
+    background-color: #99E2D0;
+    margin: -16px -80px -16px 16px;
+    width: 64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition-duration: 0.5s;
+}
+
+.menuRestaurant:hover .menuRestaurant__confirmation
+{
+    margin-right: -16px;
+}
+
+.menuRestaurant__iconeModif
+{
+    display: none;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+
+.menuRestaurant:hover .menuRestaurant__iconeModif
+{
+    transform: rotate(0);
+}
+
+.menuRestaurant__icone
+{
+    color: #99E2D0;
+}
+
+.modifBoutton
+{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 48px 0px;
+}
+
+.commanderBoutton
+{
+    border: 0;
+    width: auto;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 15px 25px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 100px;
+    color: white;
+    background: linear-gradient(#FF79DA, #9356DC);
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.footerLogoBis
+{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Shrikhand', cursive;
+    font-weight: normal;
 }

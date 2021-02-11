@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <title>La palette du goût</title>
+  <title>A la française</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e2ae3de620.js" crossorigin="anonymous"></script>
 </head>
 
@@ -13,7 +16,7 @@
   <header class="headerRestaurant">
     <div class="restaurantConteneur">
       <a href="index.html"><i class="headerFleche fas fa-arrow-left"></i></a>
-      <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood" class="headerLogo">
+      <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood" class="headerLogoBis">
     </div>
   </header>
 
@@ -23,14 +26,15 @@
     <header class="menuHeader">
       <h2 class="menuTitre">La palette du goût</h2>
       <button class="menuBoutton">
-        <i class="menuLike far fa-heart fa-2x"></i>
+        <i class="carteLikeNoBg far fa-heart fa-2x"></i>
+        <i class="carteLikeBg fas fa-heart fa-2x"></i>
       </button>
     </header>
 
     <div class="menuCartes">
       <section class="menuCarte">
         <h3 class="menuCarte__titre">Entrées</h3>
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-0">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Fricassée d'escargot</h4>
             <p class="menuRestaurant__description">Au piment d'espelette</p>
@@ -43,7 +47,7 @@
           </div>
         </section>
         
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-1">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Foie gras de canard mi-cuit</h4>
             <p class="menuRestaurant__description">Et ses copeaux de truffe noire</p>
@@ -56,7 +60,7 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-2">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Oeuf au plat</h4>
             <p class="menuRestaurant__description">Assaisonné à la truffe sur lit de poireaux</p>
@@ -72,7 +76,7 @@
   
       <section class="menuCarte">
         <h3 class="menuCarte__titre">Plats</h3>
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-3">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Filet de boeuf aux herbes</h4>
             <p class="menuRestaurant__description">Accompagné de sa ribambelle de légumes</p>
@@ -85,7 +89,7 @@
           </div>
         </section>
         
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-4">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Parmentier de queue de boeuf</h4>
             <p class="menuRestaurant__description">A la truffe noire sur sa purée de panais</p>
@@ -98,7 +102,7 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-5">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Filet de Turbot</h4>
             <p class="menuRestaurant__description">Aux agrumes</p>
@@ -114,7 +118,7 @@
   
       <section class="menuCarte">
         <h3 class="menuCarte_titre">Desserts</h3>
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-6">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Paris-Brest</h4>
             <p class="menuRestaurant__description">Revisité</p>
@@ -127,7 +131,7 @@
           </div>
         </section>
         
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-7">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Macaron au chocolat d'exception</h4>
             <p class="menuRestaurant__description">Et glace à la vanille de Madagascar</p>
@@ -140,7 +144,7 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-8">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Mousse au chocolat</h4>
             <p class="menuRestaurant__description">Au piment d'espelette et à la truffe noire</p>
@@ -161,8 +165,8 @@
   </main>
 
   <footer class="footer">
-    <div class="conteneur">
-      <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood" class="footerLogo">
+    <div class="footerConteneur">
+      <h2 class="footerLogoBis">ohmyfood</h2>
       <ul class="footerListe">
         <li class="footerPoint">
           <a class="footerLien" href="#"><i class="footerIcone fas fa-utensils"></i>Proposer un restaurant</a>

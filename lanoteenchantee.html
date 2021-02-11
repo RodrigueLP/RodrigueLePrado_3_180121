@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <title>La note enchantée</title>
+  <title>A la française</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e2ae3de620.js" crossorigin="anonymous"></script>
 </head>
 
@@ -13,7 +16,7 @@
   <header class="headerRestaurant">
     <div class="restaurantConteneur">
       <a href="index.html"><i class="headerFleche fas fa-arrow-left"></i></a>
-      <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood" class="headerLogo">
+      <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood" class="headerLogoBis">
     </div>
   </header>
 
@@ -23,14 +26,15 @@
     <header class="menuHeader">
       <h2 class="menuTitre">La note enchantée</h2>
       <button class="menuBoutton">
-        <i class="menuLike far fa-heart fa-2x"></i>
+        <i class="carteLikeNoBg far fa-heart fa-2x"></i>
+        <i class="carteLikeBg fas fa-heart fa-2x"></i>
       </button>
     </header>
 
     <div class="menuCartes">
       <section class="menuCarte">
         <h3 class="menuCarte__titre">Entrées</h3>
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-0">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Raviole de foie gras</h4>
             <p class="menuRestaurant__description">Accompagnés de leur crème à la truffe</p>
@@ -43,7 +47,7 @@
           </div>
         </section>
         
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-1">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Caviar osciètre</h4>
             <p class="menuRestaurant__description">Sur blini à la farine de blé noir</p>
@@ -56,7 +60,7 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-2">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Homard et espuma</h4>
             <p class="menuRestaurant__description">Marinés aux zests d'orange</p>
@@ -69,7 +73,7 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-3">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Foie gras de canard cuit entier</h4>
             <p class="menuRestaurant__description">Confiture de figue et pain toasté</p>
@@ -85,7 +89,7 @@
   
       <section class="menuCarte">
         <h3 class="menuCarte__titre">Plats</h3>
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-4">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Noix de coquilles Saint-Jacques</h4>
             <p class="menuRestaurant__description">Sur lit de purée de céleri-rave</p>
@@ -98,7 +102,7 @@
           </div>
         </section>
         
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-5">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Langoustine poêlée</h4>
             <p class="menuRestaurant__description">Purée de patate douce</p>
@@ -111,7 +115,7 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-6">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Mijoté de queue de boeuf</h4>
             <p class="menuRestaurant__description">Et riz sauvage aux zestes de citron</p>
@@ -127,7 +131,7 @@
   
       <section class="menuCarte">
         <h3 class="menuCarte__titre">Desserts</h3>
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-7">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Macaron noisette et chocolat</h4>
             <p class="menuRestaurant__description">Glace au caramel brun et sel de Guérande</p>
@@ -140,7 +144,7 @@
           </div>
         </section>
         
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-8">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Baba au rhum revisité</h4>
             <p class="menuRestaurant__description">Avec son coulis de citron</p>
@@ -153,7 +157,7 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-9">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Tarte au citron meringuée</h4>
             <p class="menuRestaurant__description">Destructurée</p>
@@ -174,8 +178,8 @@
   </main>
 
   <footer class="footer">
-    <div class="conteneur">
-      <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood" class="footerLogo">
+    <div class="footerConteneur">
+      <h2 class="footerLogoBis">ohmyfood</h2>
       <ul class="footerListe">
         <li class="footerPoint">
           <a class="footerLien" href="#"><i class="footerIcone fas fa-utensils"></i>Proposer un restaurant</a>

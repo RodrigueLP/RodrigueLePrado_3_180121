@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e2ae3de620.js" crossorigin="anonymous"></script>
 </head>
 
@@ -13,7 +16,7 @@
   <header class="headerRestaurant">
     <div class="restaurantConteneur">
       <a href="index.html"><i class="headerFleche fas fa-arrow-left"></i></a>
-      <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood" class="headerLogo">
+      <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood" class="headerLogoBis">
     </div>
   </header>
 
@@ -23,14 +26,15 @@
     <header class="menuHeader">
       <h2 class="menuTitre">A la française</h2>
       <button class="menuBoutton">
-        <i class="menuLike far fa-heart fa-2x"></i>
+        <i class="carteLikeNoBg far fa-heart fa-2x"></i>
+        <i class="carteLikeBg fas fa-heart fa-2x"></i>
       </button>
     </header>
 
     <div class="menuCartes">
       <section class="menuCarte">
         <h3 class="menuCarte__titre">Entrées</h3>
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-0">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Tartare de poulpe acidulé</h4>
             <p class="menuRestaurant__description">Aux zestes d'orange</p>
@@ -43,7 +47,7 @@
           </div>
         </section>
         
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-1">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Velouté de légumes d'antan</h4>
             <p class="menuRestaurant__description">Carotte, panais, topinambour</p>
@@ -56,10 +60,10 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-2">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Soupe à l'oignon</h4>
-            <p class="menuRestaurant__description">Revisité</p>
+            <p class="menuRestaurant__description">Revisitée</p>
           </header>
           <div class="menuRestaurant__prix">20€</div>
           <div class="menuRestaurant__confirmation">
@@ -72,7 +76,7 @@
   
       <section class="menuCarte">
         <h3 class="menuCarte__titre">Plats</h3>
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-3">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Coquilles Saint-Jacques</h4>
             <p class="menuRestaurant__description">Accompagné d'une purée de panais</p>
@@ -85,7 +89,7 @@
           </div>
         </section>
         
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-4">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Magret de canard</h4>
             <p class="menuRestaurant__description">Et parmentier de pommes de terres</p>
@@ -98,7 +102,7 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-5">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Pigeonneau d'Ille-et-Vilaine</h4>
             <p class="menuRestaurant__description">Sur son lit de gnocchis aux légumes</p>
@@ -114,7 +118,7 @@
   
       <section class="menuCarte">
         <h3 class="menuCarte__titre">Desserts</h3>
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-6">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Pétales de violettes glacés</h4>
             <p class="menuRestaurant__description">Et purée de noisettes</p>
@@ -127,7 +131,7 @@
           </div>
         </section>
         
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-7">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Fondant au chocolat</h4>
             <p class="menuRestaurant__description">Revisité</p>
@@ -140,7 +144,7 @@
           </div>
         </section>
   
-        <section class="menuRestaurant">
+        <section class="menuRestaurant delay-8">
           <header class="menuRestaurant__header">
             <h4 class="menuRestaurant__titre">Millefeuille croustillant</h4>
             <p class="menuRestaurant__description">Myrtilles et pâtes d'amande</p>
@@ -161,8 +165,8 @@
   </main>
 
   <footer class="footer">
-    <div class="conteneur">
-      <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood" class="footerLogo">
+    <div class="footerConteneur">
+      <h2 class="footerLogoBis">ohmyfood</h2>
       <ul class="footerListe">
         <li class="footerPoint">
           <a class="footerLien" href="#"><i class="footerIcone fas fa-utensils"></i>Proposer un restaurant</a>
