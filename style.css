@@ -1,8 +1,83 @@
+/* LOADER */
+
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.90);
+    animation-name: loader;
+    animation-duration: 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+@keyframes loader {
+    100% {
+      opacity: 0%;
+      z-index: -10;
+    }
+  } 
+
+.loaderItem
+{
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    animation-name: saut;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.loaderConteneur
+{
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+}
+
+.loaderItem--1
+{
+    background-color: #9356DC; 
+}
+
+.loaderItem--2
+{
+    background-color: #FF79DA;
+    animation-delay: 0.25s;
+}
+
+.loaderItem--3
+{
+    background-color: #99E2D0;
+    animation-delay: 0.5s;
+}
+
+@keyframes saut {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(8px);
+    }
+    75% {
+      transform: translateY(-8px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+}
+
 /* BODY */
 
 body
 {
-    margin: 0;
+    margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -33,6 +108,22 @@ body
     margin: auto;
 }
 
+@media (min-width: 720px) {
+    .headerLogo
+    {
+        width: 30%;
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .headerLogo
+    {
+        width: 20%;
+
+    }
+}
+
 /* SECTIONS */
 
 .localisation
@@ -47,15 +138,15 @@ body
 
 .localisationIcone
 {
-    margin-right: 1rem;
+    margin-right: 16px;
     color: #303030;
 }
 
 .localisationText
 {
     font-size: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
     color: #303030;
 }
 
@@ -68,7 +159,7 @@ body
 
 .presentationTitre
 {
-    margin: 0;
+    margin: 0px;
     font-size: 30px;
     font-size: 20px;
 }
@@ -106,7 +197,7 @@ body
 
 .explicationTitre
 {
-    margin-top: 0;
+    margin-top: 0px;
     font-size: 20px;
 }
 
@@ -119,6 +210,13 @@ body
     counter-reset: compteListe;
 }
 
+@media (min-width: 1024px)
+{
+    .explicationListe{
+    display: flex;
+    }
+}
+
 .explicationIcone
 {
     margin-right: 20px;
@@ -127,14 +225,34 @@ body
 .explicationPoint
 {
     padding: 25px;
-    margin: 15px 0 15px 10px;
+    margin: 15px 0px 15px 10px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
     border-radius: 20px;
     background-color: #F6F6F6;
     display: flex;
     position: relative;
     counter-increment: compteListe;
+    animation-duration: 0.6s;
+    animation-name: Restaurant;
+    animation-timing-function: cubic-bezier(0,0,.57,1);
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%;
 }
+
+@media (min-width: 1024px) {
+    .explicationPoint
+    {
+    flex: 1;
+    margin: 0px;
+    margin-left: 32px;
+    }
+
+    .explicationPoint:first-child 
+    {
+      margin-left: 12px;
+    }
+  }
 
 .explicationPoint:hover
 {
@@ -143,12 +261,12 @@ body
 
 .explicationPoint:first-child
 {
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 .explicationPoint:last-child
 {
-    margin-bottom: 0; 
+    margin-bottom: 0px; 
 }
 
 .explicationPoint::before
@@ -197,6 +315,20 @@ body
     row-gap: 30px;
 }
 
+@media (min-width: 1024px) {
+    .cartes
+    {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 720px) {
+    .cartes
+    {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .carte
 {
     background-color: white;
@@ -205,14 +337,22 @@ body
     text-decoration: none;
     display: block;
     list-style: none;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+    animation-duration: 0.6s;
+    animation-name: Restaurant;
+    animation-timing-function: cubic-bezier(0,0,.57,1);
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%;
 }
+
 
 .carteImage
 {
     height: 190px;
     width: 100%;
     border: transparent solid 0px;
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0px 0px;
     box-shadow: none;
     object-fit: cover;
 }
@@ -239,72 +379,90 @@ body
 
 .carteTitre
 {
-    margin: 0;
+    margin: 0px;
     margin-bottom: 4px;
     font-size: 16px;
 }
 
 .carteSoustitre
 {
-    margin: 0;
+    margin: 0px;
     font-size: 14px;
 }
 
-.menuBoutton
-{
-    height: 30px;
-    width: 30px;
+.menuBoutton {
+    height: 32px;
+    width: 32px;
     background-color: transparent;
     border: transparent 0px solid;
     padding: 0;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     position: relative;
+    background-color: black;
+}
+
+.carteLike
+{
+    background-color: white !important;
+}
+
+.carteLikeBis
+{
+    background-color: #F6F6F6;
+}
+
+.menuBoutton:hover::before {
+    opacity: 100%;
+  }
+  
+.menuBoutton::before {
+    opacity: 0%;
+    transition: 0.5s;
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, #9356DC 0%,#FF79DA 100%);
+}
+.menuLike
+{
+transition-duration: .25s;
+background-color: #F6F6F6;
+position: absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+display:flex;
+align-items:center;
+justify-content:center;
+mix-blend-mode: lighten;
+}
+
+.menuBoutton:hover .menuLike--noBg
+{
+    opacity: 0%;
+}
+
+.menuBoutton:hover .menuLike--Bg
+{
+    opacity: 100%;
+}
+
+.carte:visited
+{
+    color: black;
 }
 
 .groupeCarte
 {
     flex: 1;
     color: black;
-}
-
-.carteLikeNoBg
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color: black;
-}
-
-.carteLikeBg
-{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color: #9356DC;
-}
-
-.carteLikeNoBg:hover
-{
-    opacity: 0;
-}
-
-.carteLikeBg:hover
-{
-    opacity: 1;
-    transition-duration: 0.5s;
 }
 
 /* FOOTER */
@@ -316,7 +474,7 @@ body
 
 .footerLogo
 {
-    margin: 0;
+    margin: 0px;
     margin-bottom: 15px;
     max-width: 200px;
     color: white;
@@ -327,13 +485,13 @@ body
 .footerListe
 {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .footerPoint
 {
-    margin: 8px 0;
+    margin: 8px 0px;
 }
 
 .footerLien
@@ -379,6 +537,22 @@ body
     flex-direction: row;
     width: 40%;
     margin: auto;
+}
+
+@media (min-width: 720px) {
+    .headerLogoBis
+    {
+        width: 30%;
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .headerLogoBis
+    {
+        width: 20%;
+
+    }
 }
 
 .headerFleche
@@ -433,6 +607,20 @@ body
     display: grid;
 }
 
+@media (min-width: 1024px) 
+{
+    .menuCartes{
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 16px;}
+}
+
+@media (min-width: 720px) 
+{
+    .menuCartes{
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 16px;}
+}
+
 .menuCartes
 {
     max-width: 100%;
@@ -472,9 +660,9 @@ body
     overflow: hidden;
     cursor: pointer;
     max-width: 100%;
-    animation-duration: 0.6s;
+    animation-duration: 1s;
     animation-name: Restaurant;
-    animation-timing-function: cubic-bezier(0.5,1.58,0.34,0.82);
+    animation-timing-function: cubic-bezier(0,0,.57,1);
     animation-fill-mode: both;
     transform: scale(0);
     max-width: 100%;
@@ -484,11 +672,13 @@ body
 {
     0% 
     {
-        transform: scale(0)
+        transform: scale(0);
+        opacity: 0%;
     }
     100% 
     {
         transform: scale(1);
+        opacity: 100%;
     }
 }
 
@@ -499,47 +689,47 @@ body
   
 .delay-1 
 {
-    animation-delay: 0.1s;
+    animation-delay: 0.15s;
 }
   
 .delay-2 
 {
-    animation-delay: 0.2s;
+    animation-delay: 0.30s;
 }
   
 .delay-3 
 {
-    animation-delay: 0.3s;
+    animation-delay: 0.45s;
 }
   
 .delay-4 
 {
-    animation-delay: 0.4s;
+    animation-delay: 0.60s;
 }
   
 .delay-5 
 {
-    animation-delay: 0.5s;
+    animation-delay: 0.75s;
 }
   
 .delay-6 
 {
-    animation-delay: 0.6s;
+    animation-delay: 0.9s;
 }
   
 .delay-7 
 {
-    animation-delay: 0.7s;
+    animation-delay: 1.05s;
 }
   
 .delay-8 
 {
-    animation-delay: 0.8s;
+    animation-delay: 1.2s;
 }
 
 .delay-9
 {
-    animation-delay: 0.9s;
+    animation-delay: 1.35s;
 }
 
 .menuRestaurant__header
@@ -551,7 +741,7 @@ body
 
 .menuRestaurant__titre
 {
-    margin: 0;
+    margin: 0px;
     text-overflow: ellipsis;
     overflow: hidden;
     font-size: 15px;
@@ -642,7 +832,7 @@ body
 
 .footerLogoBis
 {
-    margin: 0;
+    margin: 0px;
     margin-bottom: 10px;
     font-size: 20px;
     color: white;
