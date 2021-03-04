@@ -104,14 +104,14 @@ body
     margin-bottom: 10px;;
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 40%;
     margin: auto;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
     .headerLogo
     {
-        width: 30%;
+        width: 20%;
 
     }
 }
@@ -119,7 +119,7 @@ body
 @media (min-width: 1024px) {
     .headerLogo
     {
-        width: 20%;
+        width: 15%;
 
     }
 }
@@ -185,6 +185,13 @@ body
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
+.presentationBoutton:hover
+{
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+    filter: brightness(1.2);
+}
+
 .explication
 {
     padding: 30px 15px;
@@ -231,12 +238,6 @@ body
     background-color: #F6F6F6;
     display: flex;
     position: relative;
-    counter-increment: compteListe;
-    animation-duration: 0.6s;
-    animation-name: Restaurant;
-    animation-timing-function: cubic-bezier(0,0,.57,1);
-    animation-fill-mode: both;
-    transform: scale(0);
     max-width: 100%;
 }
 
@@ -253,6 +254,11 @@ body
       margin-left: 12px;
     }
   }
+
+.explicationPoint:hover .explicationIcone
+{
+    color: #9356DC;
+}
 
 .explicationPoint:hover
 {
@@ -283,11 +289,6 @@ body
     color: white;
     position: absolute;
     left: -12px;
-}
-
-.explicationIcone:hover
-{
-   color: rgb(147, 86, 220)
 }
 
 .main
@@ -322,7 +323,7 @@ body
     }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
     .cartes
     {
     grid-template-columns: repeat(2, 1fr);
@@ -338,11 +339,10 @@ body
     display: block;
     list-style: none;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
-    animation-duration: 0.6s;
+    animation-duration: 1.2s;
     animation-name: Restaurant;
-    animation-timing-function: cubic-bezier(0,0,.57,1);
+    animation-timing-function: cubic-bezier(.35,0,.61,1);
     animation-fill-mode: both;
-    transform: scale(0);
     max-width: 100%;
 }
 
@@ -415,13 +415,15 @@ body
     background-color: #F6F6F6;
 }
 
-.menuBoutton:hover::before {
+.menuBoutton:hover::before 
+{
     opacity: 100%;
-  }
+    animation: 500ms 0ms linear both;
+}
   
 .menuBoutton::before {
     opacity: 0%;
-    transition: 0.5s;
+    animation: 500ms 0ms linear both;
     content: " ";
     position: absolute;
     top: 0px;
@@ -430,6 +432,7 @@ body
     width: 100%;
     background: linear-gradient(0deg, #9356DC 0%,#FF79DA 100%);
 }
+
 .menuLike
 {
 transition-duration: .25s;
@@ -540,7 +543,7 @@ mix-blend-mode: lighten;
     margin: auto;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
     .headerLogoBis
     {
         width: 30%;
@@ -615,7 +618,7 @@ mix-blend-mode: lighten;
     column-gap: 16px;}
 }
 
-@media (min-width: 720px) 
+@media (min-width: 768px) 
 {
     .menuCartes{
     grid-template-columns: repeat(2,1fr);
@@ -661,21 +664,43 @@ mix-blend-mode: lighten;
     overflow: hidden;
     cursor: pointer;
     max-width: 100%;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-name: Restaurant;
-    animation-timing-function: cubic-bezier(0,0,.57,1);
+    animation-timing-function: cubic-bezier(.35,0,.61,1);
     animation-fill-mode: both;
-    transform: scale(0);
     max-width: 100%;
+    white-space: nowrap;
+    width: 83%;
 }
 
 @keyframes Restaurant 
 {
     0% 
     {
-        transform: scale(0);
+        transform: scale(0.98);
         opacity: 0%;
     }
+
+    15%
+    {
+        opacity: 0%;  
+    }
+
+    25%
+    {
+        opacity: 0%;
+    }
+
+    50%
+    {
+        opacity: 0%;
+    }
+
+    75%
+    {
+        opacity: 50%;
+    }
+
     100% 
     {
         transform: scale(1);
@@ -690,47 +715,47 @@ mix-blend-mode: lighten;
   
 .delay-1 
 {
-    animation-delay: 0.15s;
+    animation-delay: 0.2s;
 }
   
 .delay-2 
 {
-    animation-delay: 0.30s;
+    animation-delay: 0.4s;
 }
   
 .delay-3 
 {
-    animation-delay: 0.45s;
+    animation-delay: 0s;
 }
   
 .delay-4 
 {
-    animation-delay: 0.60s;
+    animation-delay: 0.2s;
 }
   
 .delay-5 
 {
-    animation-delay: 0.75s;
+    animation-delay: 0.4s;
 }
   
 .delay-6 
 {
-    animation-delay: 0.9s;
+    animation-delay: 0s;
 }
   
 .delay-7 
 {
-    animation-delay: 1.05s;
+    animation-delay: 0.2s;
 }
   
 .delay-8 
 {
-    animation-delay: 1.2s;
+    animation-delay: 0.4s;
 }
 
 .delay-9
 {
-    animation-delay: 1.35s;
+    animation-delay: 0.6s;
 }
 
 .menuRestaurant__header
@@ -829,6 +854,13 @@ mix-blend-mode: lighten;
     background: linear-gradient(#FF79DA, #9356DC);
     cursor: pointer;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.commanderBoutton:hover
+{
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+    filter: brightness(1.2);
 }
 
 .footerLogoBis
